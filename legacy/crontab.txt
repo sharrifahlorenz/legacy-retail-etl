@@ -1,0 +1,3 @@
+# on-prem batch server: etl-batch-01.corp.local
+# runs nightly at 02:00, pages on-call if it fails
+0 2 * * * cd /opt/retail-etl && /usr/bin/python3 -m legacy.run_nightly >> /var/log/retail-etl.log 2>&1

@@ -1,0 +1,801 @@
+customer_id,first_name,last_name,email,region,signup_date
+1,First1,Last1,cust1@example.com,Southeast,2022-10-17
+2,First2,Last2,cust2@example.com, West ,2021-08-17
+3,First3,Last3,cust3@example.com,NORTHEAST,2023-07-03
+4,First4,Last4,cust4@example.com,SOUTHWEST,2021-01-31
+5,First5,Last5,cust5@example.com, West ,2021-01-28
+6,First6,Last6,cust6@example.com,midwest,2022-07-13
+7,First7,Last7,cust7@example.com,Southeast,2023-04-09
+8,First8,Last8,cust8@example.com,Southeast,2022-12-16
+9,First9,Last9,cust9@example.com,West,2023-09-08
+10,First10,Last10,cust10@example.com,midwest,2021-04-10
+11,First11,Last11,cust11@example.com,NORTHEAST,2023-04-07
+12,First12,Last12,cust12@example.com,midwest,2023-09-24
+13,First13,Last13,cust13@example.com,midwest,2023-04-30
+14,First14,Last14,cust14@example.com, West ,2022-08-15
+15,First15,Last15,cust15@example.com,Southeast,2021-08-22
+16,First16,Last16,cust16@example.com, West ,2023-06-07
+17,First17,Last17,cust17@example.com,Southeast,2023-05-05
+18,First18,Last18,cust18@example.com, West ,2022-11-18
+19,First19,Last19,cust19@example.com, West ,2021-03-15
+20,First20,Last20,cust20@example.com, West ,2021-09-08
+21,First21,Last21,cust21@example.com,NORTHEAST,2022-12-06
+22,First22,Last22,cust22@example.com,West,2021-08-23
+23,First23,Last23,cust23@example.com,SOUTHWEST,2021-10-02
+24,First24,Last24,cust24@example.com,West,2023-06-17
+25,First25,Last25,cust25@example.com,Southeast,2022-02-10
+26,First26,Last26,cust26@example.com,SOUTHWEST,2021-09-29
+27,First27,Last27,cust27@example.com,SOUTHWEST,2021-09-27
+28,First28,Last28,cust28@example.com,Southeast,2022-02-13
+29,First29,Last29,cust29@example.com,NORTHEAST,2022-06-06
+30,First30,Last30,cust30@example.com,West,2021-06-06
+31,First31,Last31,cust31@example.com,West,2022-09-03
+32,First32,Last32,cust32@example.com,NORTHEAST,2022-06-26
+33,First33,Last33,cust33@example.com,SOUTHWEST,2022-11-28
+34,First34,Last34,cust34@example.com,NORTHEAST,2023-02-08
+35,First35,Last35,cust35@example.com, West ,2021-10-28
+36,First36,Last36,cust36@example.com,Southeast,2023-06-16
+37,First37,Last37,cust37@example.com,midwest,2022-06-04
+38,First38,Last38,cust38@example.com,Southeast,2023-05-12
+39,First39,Last39,cust39@example.com,SOUTHWEST,2022-01-18
+40,First40,Last40,,NORTHEAST,2023-07-30
+41,First41,Last41,cust41@example.com,midwest,2021-04-25
+42,First42,Last42,cust42@example.com,NORTHEAST,2021-09-03
+43,First43,Last43,cust43@example.com,SOUTHWEST,2021-03-29
+44,First44,Last44,cust44@example.com,SOUTHWEST,2023-02-24
+45,First45,Last45,cust45@example.com,West,2021-06-19
+46,First46,Last46,cust46@example.com, West ,2023-09-15
+47,First47,Last47,cust47@example.com, West ,2022-12-08
+48,First48,Last48,cust48@example.com,West,2022-10-28
+49,First49,Last49,cust49@example.com,NORTHEAST,2021-05-04
+50,First50,Last50,cust50@example.com,NORTHEAST,2022-08-26
+51,First51,Last51,cust51@example.com,NORTHEAST,2021-03-14
+52,First52,Last52,cust52@example.com,SOUTHWEST,2023-07-17
+53,First53,Last53,cust53@example.com,SOUTHWEST,2021-09-01
+54,First54,Last54,cust54@example.com,SOUTHWEST,2021-05-16
+55,First55,Last55,cust55@example.com,West,2022-04-30
+56,First56,Last56,cust56@example.com,midwest,2021-07-14
+57,First57,Last57,cust57@example.com,NORTHEAST,2022-03-10
+58,First58,Last58,cust58@example.com,NORTHEAST,2022-11-21
+59,First59,Last59,cust59@example.com,NORTHEAST,2022-02-17
+60,First60,Last60,cust60@example.com,Southeast,2021-09-12
+61,First61,Last61,cust61@example.com,NORTHEAST,2022-03-09
+62,First62,Last62,cust62@example.com,NORTHEAST,2022-03-30
+63,First63,Last63,cust63@example.com,NORTHEAST,2021-02-21
+64,First64,Last64,cust64@example.com,Southeast,2023-09-20
+65,First65,Last65,cust65@example.com,West,2021-06-20
+66,First66,Last66,cust66@example.com,West,2023-07-14
+67,First67,Last67,cust67@example.com,midwest,2021-09-29
+68,First68,Last68,cust68@example.com,SOUTHWEST,2022-03-10
+69,First69,Last69,cust69@example.com,midwest,2022-11-09
+70,First70,Last70,cust70@example.com,SOUTHWEST,2021-08-11
+71,First71,Last71,cust71@example.com,SOUTHWEST,2021-03-04
+72,First72,Last72,cust72@example.com,Southeast,2022-05-04
+73,First73,Last73,cust73@example.com,Southeast,2021-02-28
+74,First74,Last74,cust74@example.com,Southeast,2021-03-12
+75,First75,Last75,cust75@example.com,Southeast,2022-02-18
+76,First76,Last76,cust76@example.com,West,2022-08-16
+77,First77,Last77,cust77@example.com,midwest,2022-11-05
+78,First78,Last78,cust78@example.com,midwest,2021-07-29
+79,First79,Last79,cust79@example.com,West,2022-02-10
+80,First80,Last80,cust80@example.com,NORTHEAST,2021-11-20
+81,First81,Last81,cust81@example.com,NORTHEAST,2022-04-15
+82,First82,Last82,cust82@example.com,Southeast,2021-03-17
+83,First83,Last83,cust83@example.com,Southeast,2023-08-14
+84,First84,Last84,cust84@example.com,SOUTHWEST,2022-01-14
+85,First85,Last85,cust85@example.com, West ,2022-12-22
+86,First86,Last86,,midwest,2022-06-26
+87,First87,Last87,cust87@example.com,Southeast,2023-08-13
+88,First88,Last88,cust88@example.com,SOUTHWEST,2021-09-28
+89,First89,Last89,cust89@example.com, West ,2021-06-09
+90,First90,Last90,cust90@example.com,midwest,2021-12-18
+91,First91,Last91,cust91@example.com,NORTHEAST,2022-06-02
+92,First92,Last92,cust92@example.com,NORTHEAST,2021-04-05
+93,First93,Last93,cust93@example.com,midwest,2021-01-04
+94,First94,Last94,cust94@example.com,West,2021-06-15
+95,First95,Last95,, West ,2022-07-29
+96,First96,Last96,cust96@example.com,midwest,2023-07-15
+97,First97,Last97,cust97@example.com,NORTHEAST,2022-08-20
+98,First98,Last98,cust98@example.com,NORTHEAST,2021-11-12
+99,First99,Last99,cust99@example.com, West ,2023-07-10
+100,First100,Last100,cust100@example.com,West,2021-04-16
+101,First101,Last101,cust101@example.com,Southeast,2023-09-25
+102,First102,Last102,cust102@example.com,Southeast,2023-06-05
+103,First103,Last103,cust103@example.com,midwest,2023-06-22
+104,First104,Last104,cust104@example.com, West ,2023-03-13
+105,First105,Last105,cust105@example.com, West ,2023-04-11
+106,First106,Last106,cust106@example.com,West,2021-04-21
+107,First107,Last107,cust107@example.com,midwest,2021-08-16
+108,First108,Last108,cust108@example.com,Southeast,2021-11-09
+109,First109,Last109,cust109@example.com,midwest,2021-01-25
+110,First110,Last110,cust110@example.com,midwest,2023-06-05
+111,First111,Last111,cust111@example.com,SOUTHWEST,2022-10-19
+112,First112,Last112,cust112@example.com,midwest,2021-12-06
+113,First113,Last113,cust113@example.com,NORTHEAST,2021-07-02
+114,First114,Last114,cust114@example.com,midwest,2021-04-22
+115,First115,Last115,cust115@example.com,West,2022-03-23
+116,First116,Last116,cust116@example.com, West ,2023-07-11
+117,First117,Last117,,SOUTHWEST,2022-03-23
+118,First118,Last118,cust118@example.com, West ,2022-12-05
+119,First119,Last119,cust119@example.com, West ,2021-07-21
+120,First120,Last120,cust120@example.com,NORTHEAST,2023-08-01
+121,First121,Last121,cust121@example.com, West ,2023-01-08
+122,First122,Last122,cust122@example.com,SOUTHWEST,2022-02-23
+123,First123,Last123,cust123@example.com,West,2021-05-11
+124,First124,Last124,cust124@example.com,SOUTHWEST,2022-11-25
+125,First125,Last125,cust125@example.com,midwest,2021-11-05
+126,First126,Last126,cust126@example.com,SOUTHWEST,2021-10-21
+127,First127,Last127,cust127@example.com, West ,2022-11-02
+128,First128,Last128,cust128@example.com, West ,2021-08-07
+129,First129,Last129,cust129@example.com, West ,2021-06-23
+130,First130,Last130,cust130@example.com,Southeast,2022-10-11
+131,First131,Last131,cust131@example.com,Southeast,2022-11-20
+132,First132,Last132,cust132@example.com,SOUTHWEST,2021-01-26
+133,First133,Last133,cust133@example.com, West ,2023-05-21
+134,First134,Last134,cust134@example.com,West,2022-08-13
+135,First135,Last135,cust135@example.com,NORTHEAST,2022-02-14
+136,First136,Last136,cust136@example.com,NORTHEAST,2023-07-04
+137,First137,Last137,cust137@example.com, West ,2023-03-09
+138,First138,Last138,cust138@example.com,NORTHEAST,2022-06-15
+139,First139,Last139,cust139@example.com,SOUTHWEST,2022-04-13
+140,First140,Last140,cust140@example.com,West,2022-07-27
+141,First141,Last141,cust141@example.com,West,2022-09-20
+142,First142,Last142,cust142@example.com,Southeast,2023-05-01
+143,First143,Last143,cust143@example.com,Southeast,2023-02-01
+144,First144,Last144,cust144@example.com,SOUTHWEST,2023-05-11
+145,First145,Last145,cust145@example.com,NORTHEAST,2022-05-12
+146,First146,Last146,cust146@example.com,midwest,2023-01-01
+147,First147,Last147,cust147@example.com,Southeast,2023-07-04
+148,First148,Last148,cust148@example.com,NORTHEAST,2022-01-28
+149,First149,Last149,cust149@example.com,West,2022-03-01
+150,First150,Last150,cust150@example.com,SOUTHWEST,2021-03-05
+151,First151,Last151,cust151@example.com,SOUTHWEST,2023-08-27
+152,First152,Last152,cust152@example.com,midwest,2022-01-25
+153,First153,Last153,cust153@example.com,West,2023-02-11
+154,First154,Last154,cust154@example.com,SOUTHWEST,2022-07-06
+155,First155,Last155,cust155@example.com,West,2023-07-09
+156,First156,Last156,, West ,2022-05-13
+157,First157,Last157,cust157@example.com,West,2023-03-29
+158,First158,Last158,cust158@example.com,NORTHEAST,2023-07-31
+159,First159,Last159,cust159@example.com,NORTHEAST,2023-07-18
+160,First160,Last160,cust160@example.com,West,2021-03-27
+161,First161,Last161,cust161@example.com,Southeast,2021-07-06
+162,First162,Last162,cust162@example.com,West,2022-04-11
+163,First163,Last163,cust163@example.com,midwest,2021-10-12
+164,First164,Last164,cust164@example.com,,2023-05-05
+165,First165,Last165,cust165@example.com,Southeast,2022-07-07
+166,First166,Last166,cust166@example.com,NORTHEAST,2022-10-28
+167,First167,Last167,cust167@example.com,NORTHEAST,2023-02-12
+168,First168,Last168,cust168@example.com, West ,2022-09-29
+169,First169,Last169,cust169@example.com, West ,2021-04-28
+170,First170,Last170,cust170@example.com,SOUTHWEST,2021-09-20
+171,First171,Last171,cust171@example.com,Southeast,2023-09-14
+172,First172,Last172,cust172@example.com,midwest,2023-09-15
+173,First173,Last173,cust173@example.com,West,2022-08-13
+174,First174,Last174,cust174@example.com, West ,2023-08-23
+175,First175,Last175,cust175@example.com,midwest,2023-05-01
+176,First176,Last176,cust176@example.com,SOUTHWEST,2023-05-21
+177,First177,Last177,cust177@example.com, West ,2023-03-13
+178,First178,Last178,cust178@example.com,NORTHEAST,2022-01-15
+179,First179,Last179,cust179@example.com,West,2023-05-20
+180,First180,Last180,cust180@example.com,West,2023-09-11
+181,First181,Last181,cust181@example.com,SOUTHWEST,2022-12-26
+182,First182,Last182,cust182@example.com,SOUTHWEST,2023-09-16
+183,First183,Last183,cust183@example.com, West ,2023-03-05
+184,First184,Last184,cust184@example.com,NORTHEAST,2022-08-30
+185,First185,Last185,cust185@example.com,West,2021-10-13
+186,First186,Last186,cust186@example.com,NORTHEAST,2022-08-07
+187,First187,Last187,cust187@example.com,Southeast,2022-05-22
+188,First188,Last188,cust188@example.com,SOUTHWEST,2021-12-30
+189,First189,Last189,cust189@example.com,SOUTHWEST,2022-12-20
+190,First190,Last190,cust190@example.com,West,2023-08-29
+191,First191,Last191,cust191@example.com,West,2022-05-16
+192,First192,Last192,cust192@example.com,NORTHEAST,2022-10-24
+193,First193,Last193,cust193@example.com,Southeast,2021-04-06
+194,First194,Last194,cust194@example.com,SOUTHWEST,2021-11-10
+195,First195,Last195,cust195@example.com,SOUTHWEST,2022-06-28
+196,First196,Last196,cust196@example.com,midwest,2021-12-05
+197,First197,Last197,cust197@example.com,midwest,2021-09-15
+198,First198,Last198,cust198@example.com, West ,2021-05-03
+199,First199,Last199,cust199@example.com,midwest,2021-07-09
+200,First200,Last200,cust200@example.com,SOUTHWEST,2023-01-12
+201,First201,Last201,cust201@example.com,midwest,2021-10-17
+202,First202,Last202,cust202@example.com, West ,2021-08-21
+203,First203,Last203,cust203@example.com,NORTHEAST,2022-07-01
+204,First204,Last204,cust204@example.com, West ,2022-07-21
+205,First205,Last205,cust205@example.com,NORTHEAST,2023-06-09
+206,First206,Last206,cust206@example.com,midwest,2022-08-11
+207,First207,Last207,cust207@example.com,West,2021-07-08
+208,First208,Last208,cust208@example.com,NORTHEAST,2021-04-27
+209,First209,Last209,cust209@example.com,Southeast,2022-08-14
+210,First210,Last210,cust210@example.com,Southeast,2023-04-11
+211,First211,Last211,cust211@example.com,SOUTHWEST,2021-05-02
+212,First212,Last212,cust212@example.com,West,2023-03-21
+213,First213,Last213,cust213@example.com,SOUTHWEST,2022-04-07
+214,First214,Last214,cust214@example.com,SOUTHWEST,2022-03-16
+215,First215,Last215,cust215@example.com,Southeast,2023-09-11
+216,First216,Last216,cust216@example.com,Southeast,2022-10-03
+217,First217,Last217,cust217@example.com,NORTHEAST,2021-09-03
+218,First218,Last218,cust218@example.com,midwest,2022-02-23
+219,First219,Last219,cust219@example.com, West ,2021-02-03
+220,First220,Last220,cust220@example.com,midwest,2023-05-31
+221,First221,Last221,cust221@example.com,Southeast,2023-03-18
+222,First222,Last222,cust222@example.com,Southeast,2022-03-12
+223,First223,Last223,cust223@example.com,NORTHEAST,2023-07-20
+224,First224,Last224,cust224@example.com,SOUTHWEST,2021-06-19
+225,First225,Last225,cust225@example.com, West ,2023-08-02
+226,First226,Last226,cust226@example.com,SOUTHWEST,2021-11-08
+227,First227,Last227,cust227@example.com,NORTHEAST,2022-07-07
+228,First228,Last228,cust228@example.com,midwest,2023-06-30
+229,First229,Last229,cust229@example.com,SOUTHWEST,2021-01-27
+230,First230,Last230,cust230@example.com, West ,2022-08-25
+231,First231,Last231,cust231@example.com,Southeast,2023-04-22
+232,First232,Last232,cust232@example.com,midwest,2022-04-27
+233,First233,Last233,cust233@example.com,West,2021-07-05
+234,First234,Last234,cust234@example.com,midwest,2023-09-20
+235,First235,Last235,cust235@example.com,midwest,2021-11-25
+236,First236,Last236,cust236@example.com,West,2022-02-26
+237,First237,Last237,cust237@example.com,NORTHEAST,2023-04-14
+238,First238,Last238,cust238@example.com,West,2021-11-19
+239,First239,Last239,cust239@example.com, West ,2023-06-05
+240,First240,Last240,cust240@example.com,Southeast,2023-06-10
+241,First241,Last241,cust241@example.com, West ,2022-06-15
+242,First242,Last242,cust242@example.com,SOUTHWEST,2022-03-29
+243,First243,Last243,cust243@example.com, West ,2021-05-15
+244,First244,Last244,cust244@example.com,SOUTHWEST,2022-05-12
+245,First245,Last245,cust245@example.com,SOUTHWEST,2023-03-30
+246,First246,Last246,cust246@example.com,NORTHEAST,2021-01-15
+247,First247,Last247,cust247@example.com,Southeast,2022-04-18
+248,First248,Last248,cust248@example.com, West ,2022-05-26
+249,First249,Last249,cust249@example.com,West,2021-10-07
+250,First250,Last250,cust250@example.com,Southeast,2021-09-07
+251,First251,Last251,cust251@example.com,Southeast,2023-08-02
+252,First252,Last252,cust252@example.com,West,2023-06-04
+253,First253,Last253,cust253@example.com,NORTHEAST,2021-12-15
+254,First254,Last254,cust254@example.com,SOUTHWEST,2021-10-17
+255,First255,Last255,cust255@example.com,SOUTHWEST,2022-11-07
+256,First256,Last256,cust256@example.com,SOUTHWEST,2022-05-11
+257,First257,Last257,cust257@example.com,Southeast,2022-01-22
+258,First258,Last258,cust258@example.com,West,2022-12-16
+259,First259,Last259,cust259@example.com,West,2021-02-14
+260,First260,Last260,cust260@example.com, West ,2022-01-31
+261,First261,Last261,cust261@example.com,SOUTHWEST,2021-06-05
+262,First262,Last262,cust262@example.com,West,2023-09-16
+263,First263,Last263,cust263@example.com, West ,2021-04-13
+264,First264,Last264,cust264@example.com,Southeast,2021-05-28
+265,First265,Last265,cust265@example.com,midwest,2021-03-18
+266,First266,Last266,cust266@example.com,midwest,2022-10-01
+267,First267,Last267,cust267@example.com,midwest,2023-05-23
+268,First268,Last268,cust268@example.com,SOUTHWEST,2022-10-04
+269,First269,Last269,cust269@example.com, West ,2021-02-06
+270,First270,Last270,cust270@example.com,NORTHEAST,2023-08-02
+271,First271,Last271,cust271@example.com, West ,2022-03-21
+272,First272,Last272,cust272@example.com,midwest,2023-06-13
+273,First273,Last273,,NORTHEAST,2023-07-15
+274,First274,Last274,cust274@example.com,Southeast,2021-10-28
+275,First275,Last275,cust275@example.com,Southeast,2022-06-28
+276,First276,Last276,cust276@example.com,West,2021-06-24
+277,First277,Last277,cust277@example.com,SOUTHWEST,2022-09-27
+278,First278,Last278,cust278@example.com,West,2021-05-27
+279,First279,Last279,cust279@example.com,West,2021-09-19
+280,First280,Last280,cust280@example.com,NORTHEAST,2023-07-12
+281,First281,Last281,cust281@example.com,midwest,2022-03-29
+282,First282,Last282,cust282@example.com,West,2022-10-17
+283,First283,Last283,cust283@example.com,West,2023-05-16
+284,First284,Last284,cust284@example.com,SOUTHWEST,2021-04-20
+285,First285,Last285,cust285@example.com, West ,2021-10-30
+286,First286,Last286,cust286@example.com, West ,2022-02-10
+287,First287,Last287,cust287@example.com,SOUTHWEST,2023-03-08
+288,First288,Last288,cust288@example.com,midwest,2023-02-03
+289,First289,Last289,cust289@example.com,midwest,2023-03-06
+290,First290,Last290,cust290@example.com, West ,2021-08-13
+291,First291,Last291,cust291@example.com,Southeast,2023-02-13
+292,First292,Last292,cust292@example.com,NORTHEAST,2022-10-06
+293,First293,Last293,cust293@example.com,midwest,2021-11-13
+294,First294,Last294,cust294@example.com,midwest,2023-01-20
+295,First295,Last295,cust295@example.com,SOUTHWEST,2023-02-05
+296,First296,Last296,cust296@example.com,midwest,2023-06-17
+297,First297,Last297,cust297@example.com,West,2023-05-01
+298,First298,Last298,cust298@example.com,midwest,2023-09-18
+299,First299,Last299,cust299@example.com,Southeast,2023-04-04
+300,First300,Last300,cust300@example.com, West ,2023-02-12
+301,First301,Last301,cust301@example.com,SOUTHWEST,2022-11-22
+302,First302,Last302,cust302@example.com,midwest,2022-01-10
+303,First303,Last303,cust303@example.com, West ,2022-07-04
+304,First304,Last304,cust304@example.com, West ,2022-11-20
+305,First305,Last305,cust305@example.com,West,2023-08-21
+306,First306,Last306,cust306@example.com,midwest,2021-01-26
+307,First307,Last307,cust307@example.com, West ,2023-07-27
+308,First308,Last308,cust308@example.com, West ,2023-04-24
+309,First309,Last309,cust309@example.com,NORTHEAST,2022-02-23
+310,First310,Last310,cust310@example.com,Southeast,2021-11-08
+311,First311,Last311,cust311@example.com,midwest,2023-06-28
+312,First312,Last312,cust312@example.com,SOUTHWEST,2022-11-18
+313,First313,Last313,cust313@example.com,West,2022-03-06
+314,First314,Last314,cust314@example.com,West,2022-11-02
+315,First315,Last315,cust315@example.com,midwest,2023-08-20
+316,First316,Last316,cust316@example.com,midwest,2021-08-11
+317,First317,Last317,cust317@example.com, West ,2021-04-12
+318,First318,Last318,cust318@example.com,NORTHEAST,2022-01-03
+319,First319,Last319,cust319@example.com, West ,2023-08-30
+320,First320,Last320,cust320@example.com,NORTHEAST,2021-08-06
+321,First321,Last321,cust321@example.com,Southeast,2021-02-21
+322,First322,Last322,cust322@example.com,SOUTHWEST,2023-03-17
+323,First323,Last323,cust323@example.com,Southeast,2021-08-01
+324,First324,Last324,cust324@example.com,SOUTHWEST,2021-12-03
+325,First325,Last325,cust325@example.com,Southeast,2021-01-03
+326,First326,Last326,cust326@example.com, West ,2022-07-08
+327,First327,Last327,,,2023-06-07
+328,First328,Last328,cust328@example.com,NORTHEAST,2023-03-20
+329,First329,Last329,cust329@example.com,West,2021-06-28
+330,First330,Last330,cust330@example.com,West,2022-06-23
+331,First331,Last331,cust331@example.com,West,2023-03-08
+332,First332,Last332,cust332@example.com, West ,2022-05-31
+333,First333,Last333,cust333@example.com,midwest,2023-03-14
+334,First334,Last334,cust334@example.com,West,2022-04-15
+335,First335,Last335,cust335@example.com,West,2023-05-18
+336,First336,Last336,cust336@example.com,NORTHEAST,2022-12-31
+337,First337,Last337,cust337@example.com,midwest,2021-11-26
+338,First338,Last338,cust338@example.com,midwest,2022-10-02
+339,First339,Last339,cust339@example.com,West,2022-01-26
+340,First340,Last340,cust340@example.com, West ,2022-06-02
+341,First341,Last341,cust341@example.com,SOUTHWEST,2021-04-28
+342,First342,Last342,cust342@example.com,Southeast,2023-01-09
+343,First343,Last343,cust343@example.com,West,2022-02-28
+344,First344,Last344,cust344@example.com, West ,2023-01-18
+345,First345,Last345,cust345@example.com,West,2021-09-19
+346,First346,Last346,cust346@example.com,West,2021-03-10
+347,First347,Last347,cust347@example.com,Southeast,2021-04-09
+348,First348,Last348,cust348@example.com,SOUTHWEST,2022-07-24
+349,First349,Last349,cust349@example.com, West ,2021-12-04
+350,First350,Last350,cust350@example.com, West ,2023-08-22
+351,First351,Last351,cust351@example.com,midwest,2021-02-22
+352,First352,Last352,cust352@example.com, West ,2021-04-17
+353,First353,Last353,cust353@example.com,SOUTHWEST,2022-05-09
+354,First354,Last354,cust354@example.com,Southeast,2022-01-12
+355,First355,Last355,cust355@example.com,SOUTHWEST,2023-04-07
+356,First356,Last356,cust356@example.com,SOUTHWEST,2022-09-21
+357,First357,Last357,cust357@example.com,NORTHEAST,2023-08-10
+358,First358,Last358,cust358@example.com,midwest,2021-07-04
+359,First359,Last359,,SOUTHWEST,2021-12-26
+360,First360,Last360,cust360@example.com, West ,2022-11-05
+361,First361,Last361,cust361@example.com,Southeast,2023-09-23
+362,First362,Last362,cust362@example.com,midwest,2022-01-21
+363,First363,Last363,cust363@example.com,SOUTHWEST,2021-11-16
+364,First364,Last364,cust364@example.com,Southeast,2022-09-03
+365,First365,Last365,cust365@example.com,midwest,2023-02-12
+366,First366,Last366,cust366@example.com,West,2022-03-30
+367,First367,Last367,cust367@example.com,NORTHEAST,2022-03-01
+368,First368,Last368,cust368@example.com, West ,2021-12-20
+369,First369,Last369,cust369@example.com,NORTHEAST,2022-08-31
+370,First370,Last370,cust370@example.com,NORTHEAST,2021-08-14
+371,First371,Last371,cust371@example.com,Southeast,2021-07-29
+372,First372,Last372,cust372@example.com,NORTHEAST,2023-02-22
+373,First373,Last373,cust373@example.com,West,2022-05-25
+374,First374,Last374,cust374@example.com, West ,2022-06-30
+375,First375,Last375,cust375@example.com, West ,2023-04-06
+376,First376,Last376,cust376@example.com,NORTHEAST,2021-02-13
+377,First377,Last377,cust377@example.com,West,2023-06-02
+378,First378,Last378,cust378@example.com,West,2022-12-28
+379,First379,Last379,cust379@example.com,SOUTHWEST,2021-01-22
+380,First380,Last380,cust380@example.com,NORTHEAST,2022-04-17
+381,First381,Last381,cust381@example.com,SOUTHWEST,2022-03-24
+382,First382,Last382,cust382@example.com,midwest,2022-02-15
+383,First383,Last383,cust383@example.com,Southeast,2023-02-03
+384,First384,Last384,cust384@example.com,SOUTHWEST,2021-03-20
+385,First385,Last385,cust385@example.com, West ,2021-07-18
+386,First386,Last386,cust386@example.com,Southeast,2023-09-09
+387,First387,Last387,cust387@example.com,SOUTHWEST,2021-04-16
+388,First388,Last388,cust388@example.com,Southeast,2021-06-06
+389,First389,Last389,cust389@example.com,SOUTHWEST,2023-09-02
+390,First390,Last390,cust390@example.com,SOUTHWEST,2023-02-18
+391,First391,Last391,cust391@example.com, West ,2022-10-21
+392,First392,Last392,cust392@example.com,West,2021-11-20
+393,First393,Last393,cust393@example.com,NORTHEAST,2022-10-09
+394,First394,Last394,cust394@example.com,West,2021-12-27
+395,First395,Last395,cust395@example.com,NORTHEAST,2021-02-08
+396,First396,Last396,cust396@example.com,SOUTHWEST,2022-10-23
+397,First397,Last397,cust397@example.com,SOUTHWEST,2022-09-01
+398,First398,Last398,cust398@example.com,West,2023-09-05
+399,First399,Last399,cust399@example.com,midwest,2023-07-20
+400,First400,Last400,cust400@example.com,NORTHEAST,2022-09-12
+401,First401,Last401,cust401@example.com,midwest,2022-04-07
+402,First402,Last402,cust402@example.com,NORTHEAST,2023-01-02
+403,First403,Last403,cust403@example.com,SOUTHWEST,2021-09-11
+404,First404,Last404,cust404@example.com,midwest,2022-06-20
+405,First405,Last405,cust405@example.com,SOUTHWEST,2022-02-01
+406,First406,Last406,cust406@example.com,NORTHEAST,2021-02-23
+407,First407,Last407,cust407@example.com,midwest,2021-12-04
+408,First408,Last408,cust408@example.com,SOUTHWEST,2021-09-16
+409,First409,Last409,cust409@example.com, West ,2023-06-14
+410,First410,Last410,cust410@example.com, West ,2021-05-25
+411,First411,Last411,cust411@example.com, West ,2022-12-17
+412,First412,Last412,cust412@example.com, West ,2023-08-19
+413,First413,Last413,cust413@example.com, West ,2023-03-22
+414,First414,Last414,cust414@example.com,SOUTHWEST,2023-04-29
+415,First415,Last415,cust415@example.com,midwest,2021-04-06
+416,First416,Last416,cust416@example.com,Southeast,2021-01-19
+417,First417,Last417,cust417@example.com,Southeast,2021-12-16
+418,First418,Last418,cust418@example.com,NORTHEAST,2021-05-21
+419,First419,Last419,cust419@example.com,SOUTHWEST,2022-06-04
+420,First420,Last420,cust420@example.com,SOUTHWEST,2021-02-08
+421,First421,Last421,cust421@example.com,Southeast,2021-05-15
+422,First422,Last422,cust422@example.com,Southeast,2023-05-02
+423,First423,Last423,cust423@example.com, West ,2023-01-09
+424,First424,Last424,cust424@example.com,midwest,2023-01-07
+425,First425,Last425,cust425@example.com,SOUTHWEST,2023-02-10
+426,First426,Last426,cust426@example.com,West,2021-09-02
+427,First427,Last427,cust427@example.com,SOUTHWEST,2023-07-15
+428,First428,Last428,cust428@example.com,West,2022-03-28
+429,First429,Last429,cust429@example.com,Southeast,2022-05-30
+430,First430,Last430,cust430@example.com,NORTHEAST,2023-04-01
+431,First431,Last431,cust431@example.com,NORTHEAST,2022-10-19
+432,First432,Last432,cust432@example.com,midwest,2022-12-30
+433,First433,Last433,cust433@example.com,SOUTHWEST,2021-03-27
+434,First434,Last434,cust434@example.com,Southeast,2021-05-31
+435,First435,Last435,cust435@example.com,NORTHEAST,2023-04-17
+436,First436,Last436,cust436@example.com,Southeast,2022-03-01
+437,First437,Last437,cust437@example.com,NORTHEAST,2022-01-31
+438,First438,Last438,cust438@example.com, West ,2021-11-23
+439,First439,Last439,cust439@example.com,midwest,2021-12-10
+440,First440,Last440,cust440@example.com,Southeast,2023-07-29
+441,First441,Last441,cust441@example.com,NORTHEAST,2023-02-17
+442,First442,Last442,cust442@example.com,Southeast,2023-07-17
+443,First443,Last443,cust443@example.com,West,2022-07-16
+444,First444,Last444,cust444@example.com,NORTHEAST,2021-04-24
+445,First445,Last445,cust445@example.com,SOUTHWEST,2021-02-18
+446,First446,Last446,cust446@example.com,West,2022-04-14
+447,First447,Last447,cust447@example.com,SOUTHWEST,2022-09-04
+448,First448,Last448,cust448@example.com,NORTHEAST,2021-09-05
+449,First449,Last449,cust449@example.com,Southeast,2022-09-22
+450,First450,Last450,cust450@example.com,midwest,2022-11-12
+451,First451,Last451,cust451@example.com,SOUTHWEST,2021-03-11
+452,First452,Last452,,NORTHEAST,2022-07-22
+453,First453,Last453,cust453@example.com, West ,2022-10-13
+454,First454,Last454,cust454@example.com,Southeast,2021-01-17
+455,First455,Last455,cust455@example.com,SOUTHWEST,2023-01-21
+456,First456,Last456,cust456@example.com,midwest,2023-01-23
+457,First457,Last457,cust457@example.com, West ,2022-07-14
+458,First458,Last458,cust458@example.com,Southeast,2022-04-21
+459,First459,Last459,cust459@example.com,West,2023-04-11
+460,First460,Last460,cust460@example.com,Southeast,2021-02-07
+461,First461,Last461,cust461@example.com,SOUTHWEST,2023-06-27
+462,First462,Last462,cust462@example.com,midwest,2022-02-12
+463,First463,Last463,cust463@example.com,midwest,2021-02-07
+464,First464,Last464,cust464@example.com,midwest,2023-06-02
+465,First465,Last465,cust465@example.com,West,2021-10-07
+466,First466,Last466,cust466@example.com,midwest,2023-02-01
+467,First467,Last467,cust467@example.com,midwest,2023-09-25
+468,First468,Last468,cust468@example.com,NORTHEAST,2023-08-05
+469,First469,Last469,cust469@example.com,Southeast,2023-01-15
+470,First470,Last470,cust470@example.com,midwest,2022-07-13
+471,First471,Last471,cust471@example.com, West ,2022-11-08
+472,First472,Last472,cust472@example.com,West,2022-03-13
+473,First473,Last473,cust473@example.com,SOUTHWEST,2021-02-13
+474,First474,Last474,cust474@example.com,NORTHEAST,2022-03-22
+475,First475,Last475,cust475@example.com,SOUTHWEST,2021-03-18
+476,First476,Last476,cust476@example.com,NORTHEAST,2023-04-01
+477,First477,Last477,cust477@example.com,West,2021-05-27
+478,First478,Last478,cust478@example.com, West ,2021-02-05
+479,First479,Last479,cust479@example.com,NORTHEAST,2022-01-11
+480,First480,Last480,cust480@example.com,midwest,2022-09-12
+481,First481,Last481,cust481@example.com,Southeast,2022-01-16
+482,First482,Last482,cust482@example.com,midwest,2022-06-27
+483,First483,Last483,cust483@example.com,Southeast,2021-09-13
+484,First484,Last484,cust484@example.com,NORTHEAST,2022-05-27
+485,First485,Last485,cust485@example.com,Southeast,2021-09-26
+486,First486,Last486,cust486@example.com,West,2022-09-19
+487,First487,Last487,cust487@example.com,West,2021-07-24
+488,First488,Last488,cust488@example.com,NORTHEAST,2021-06-26
+489,First489,Last489,cust489@example.com,midwest,2023-04-10
+490,First490,Last490,cust490@example.com,SOUTHWEST,2022-11-15
+491,First491,Last491,cust491@example.com, West ,2021-10-25
+492,First492,Last492,cust492@example.com,midwest,2022-12-28
+493,First493,Last493,cust493@example.com,Southeast,2022-06-05
+494,First494,Last494,cust494@example.com,SOUTHWEST,2021-08-31
+495,First495,Last495,cust495@example.com,SOUTHWEST,2022-08-10
+496,First496,Last496,cust496@example.com,midwest,2021-05-13
+497,First497,Last497,cust497@example.com,SOUTHWEST,2022-02-12
+498,First498,Last498,cust498@example.com,NORTHEAST,2022-02-25
+499,First499,Last499,cust499@example.com,West,2021-05-09
+500,First500,Last500,cust500@example.com,SOUTHWEST,2022-04-23
+501,First501,Last501,cust501@example.com,Southeast,2022-10-18
+502,First502,Last502,cust502@example.com,NORTHEAST,2022-03-20
+503,First503,Last503,cust503@example.com,midwest,2022-06-15
+504,First504,Last504,cust504@example.com,SOUTHWEST,2023-08-16
+505,First505,Last505,cust505@example.com,Southeast,2023-07-06
+506,First506,Last506,cust506@example.com, West ,2022-10-13
+507,First507,Last507,cust507@example.com, West ,2021-11-07
+508,First508,Last508,cust508@example.com,Southeast,2021-06-22
+509,First509,Last509,cust509@example.com,midwest,2022-11-06
+510,First510,Last510,cust510@example.com,NORTHEAST,2023-05-13
+511,First511,Last511,cust511@example.com,SOUTHWEST,2021-03-25
+512,First512,Last512,cust512@example.com,West,2021-09-29
+513,First513,Last513,cust513@example.com, West ,2022-09-25
+514,First514,Last514,cust514@example.com,West,2022-07-13
+515,First515,Last515,cust515@example.com,midwest,2021-09-08
+516,First516,Last516,cust516@example.com,West,2022-04-10
+517,First517,Last517,cust517@example.com,SOUTHWEST,2022-03-02
+518,First518,Last518,cust518@example.com, West ,2021-05-28
+519,First519,Last519,cust519@example.com,midwest,2023-06-01
+520,First520,Last520,cust520@example.com,West,2022-06-12
+521,First521,Last521,cust521@example.com,NORTHEAST,2021-05-06
+522,First522,Last522,cust522@example.com,SOUTHWEST,2021-02-21
+523,First523,Last523,cust523@example.com,Southeast,2022-03-05
+524,First524,Last524,cust524@example.com,midwest,2023-04-14
+525,First525,Last525,cust525@example.com,SOUTHWEST,2021-07-14
+526,First526,Last526,cust526@example.com,NORTHEAST,2022-04-24
+527,First527,Last527,cust527@example.com,Southeast,2021-04-03
+528,First528,Last528,cust528@example.com,midwest,2021-08-09
+529,First529,Last529,cust529@example.com, West ,2022-05-22
+530,First530,Last530,cust530@example.com,,2022-04-27
+531,First531,Last531,cust531@example.com, West ,2021-04-21
+532,First532,Last532,cust532@example.com,West,2022-01-10
+533,First533,Last533,cust533@example.com,SOUTHWEST,2021-02-22
+534,First534,Last534,cust534@example.com,SOUTHWEST,2021-10-23
+535,First535,Last535,cust535@example.com,SOUTHWEST,2021-10-14
+536,First536,Last536,cust536@example.com,midwest,2021-05-02
+537,First537,Last537,cust537@example.com,midwest,2023-03-25
+538,First538,Last538,cust538@example.com,West,2023-02-13
+539,First539,Last539,cust539@example.com, West ,2022-05-28
+540,First540,Last540,cust540@example.com,Southeast,2021-12-08
+541,First541,Last541,cust541@example.com,SOUTHWEST,2022-09-13
+542,First542,Last542,cust542@example.com, West ,2021-11-23
+543,First543,Last543,cust543@example.com,SOUTHWEST,2023-05-13
+544,First544,Last544,cust544@example.com,West,2022-06-30
+545,First545,Last545,,NORTHEAST,2023-04-16
+546,First546,Last546,cust546@example.com, West ,2022-03-03
+547,First547,Last547,cust547@example.com,West,2023-06-13
+548,First548,Last548,cust548@example.com,SOUTHWEST,2021-09-29
+549,First549,Last549,cust549@example.com,West,2022-08-15
+550,First550,Last550,cust550@example.com,West,2021-06-24
+551,First551,Last551,cust551@example.com,SOUTHWEST,2021-06-01
+552,First552,Last552,cust552@example.com,West,2023-08-29
+553,First553,Last553,cust553@example.com,Southeast,2021-11-18
+554,First554,Last554,cust554@example.com,West,2022-02-25
+555,First555,Last555,cust555@example.com, West ,2023-06-13
+556,First556,Last556,cust556@example.com, West ,2021-05-22
+557,First557,Last557,cust557@example.com,Southeast,2022-05-05
+558,First558,Last558,cust558@example.com,midwest,2022-04-16
+559,First559,Last559,cust559@example.com, West ,2022-11-24
+560,First560,Last560,cust560@example.com,Southeast,2023-04-03
+561,First561,Last561,cust561@example.com,Southeast,2023-09-08
+562,First562,Last562,cust562@example.com,midwest,2023-08-23
+563,First563,Last563,cust563@example.com,midwest,2022-12-23
+564,First564,Last564,cust564@example.com, West ,2022-05-07
+565,First565,Last565,cust565@example.com,SOUTHWEST,2021-10-08
+566,First566,Last566,cust566@example.com,midwest,2022-01-24
+567,First567,Last567,cust567@example.com,NORTHEAST,2023-09-05
+568,First568,Last568,cust568@example.com,West,2021-10-22
+569,First569,Last569,cust569@example.com,Southeast,2022-11-03
+570,First570,Last570,cust570@example.com, West ,2023-04-28
+571,First571,Last571,cust571@example.com,SOUTHWEST,2021-10-06
+572,First572,Last572,cust572@example.com,SOUTHWEST,2021-09-03
+573,First573,Last573,cust573@example.com,West,2021-08-20
+574,First574,Last574,cust574@example.com,Southeast,2021-12-05
+575,First575,Last575,cust575@example.com,Southeast,2021-01-06
+576,First576,Last576,cust576@example.com,West,2022-02-21
+577,First577,Last577,cust577@example.com,midwest,2022-05-04
+578,First578,Last578,cust578@example.com,NORTHEAST,2021-11-25
+579,First579,Last579,cust579@example.com, West ,2022-10-30
+580,First580,Last580,cust580@example.com,Southeast,2023-05-21
+581,First581,Last581,cust581@example.com,NORTHEAST,2022-03-04
+582,First582,Last582,cust582@example.com, West ,2023-05-07
+583,First583,Last583,cust583@example.com,NORTHEAST,2023-09-13
+584,First584,Last584,cust584@example.com,midwest,2021-01-10
+585,First585,Last585,cust585@example.com,SOUTHWEST,2021-10-19
+586,First586,Last586,cust586@example.com,SOUTHWEST,2022-05-21
+587,First587,Last587,cust587@example.com,midwest,2022-04-25
+588,First588,Last588,cust588@example.com, West ,2021-06-16
+589,First589,Last589,,midwest,2021-07-10
+590,First590,Last590,cust590@example.com,SOUTHWEST,2022-08-05
+591,First591,Last591,cust591@example.com,West,2023-05-27
+592,First592,Last592,cust592@example.com,NORTHEAST,2022-06-12
+593,First593,Last593,cust593@example.com,Southeast,2021-07-09
+594,First594,Last594,cust594@example.com,midwest,2021-01-07
+595,First595,Last595,cust595@example.com,SOUTHWEST,2023-09-04
+596,First596,Last596,cust596@example.com,Southeast,2021-01-12
+597,First597,Last597,cust597@example.com,Southeast,2021-03-05
+598,First598,Last598,cust598@example.com, West ,2022-02-20
+599,First599,Last599,cust599@example.com,midwest,2023-02-28
+600,First600,Last600,cust600@example.com,Southeast,2022-01-12
+601,First601,Last601,cust601@example.com,SOUTHWEST,2022-05-05
+602,First602,Last602,cust602@example.com,West,2022-01-18
+603,First603,Last603,cust603@example.com,Southeast,2023-02-15
+604,First604,Last604,cust604@example.com,NORTHEAST,2023-02-20
+605,First605,Last605,cust605@example.com,NORTHEAST,2022-06-23
+606,First606,Last606,cust606@example.com,SOUTHWEST,2023-07-29
+607,First607,Last607,cust607@example.com,Southeast,2023-07-14
+608,First608,Last608,cust608@example.com,NORTHEAST,2021-06-18
+609,First609,Last609,cust609@example.com,NORTHEAST,2022-11-28
+610,First610,Last610,cust610@example.com,West,2023-07-10
+611,First611,Last611,cust611@example.com,NORTHEAST,2021-05-16
+612,First612,Last612,cust612@example.com, West ,2022-07-27
+613,First613,Last613,cust613@example.com, West ,2021-01-23
+614,First614,Last614,cust614@example.com,midwest,2021-08-12
+615,First615,Last615,cust615@example.com,NORTHEAST,2022-12-19
+616,First616,Last616,cust616@example.com,Southeast,2023-08-15
+617,First617,Last617,cust617@example.com, West ,2023-02-27
+618,First618,Last618,cust618@example.com,West,2022-10-24
+619,First619,Last619,cust619@example.com,West,2022-04-05
+620,First620,Last620,cust620@example.com,SOUTHWEST,2021-03-24
+621,First621,Last621,cust621@example.com,Southeast,2021-05-17
+622,First622,Last622,cust622@example.com,Southeast,2022-07-05
+623,First623,Last623,,midwest,2023-05-05
+624,First624,Last624,cust624@example.com,SOUTHWEST,2022-04-20
+625,First625,Last625,cust625@example.com,midwest,2022-01-24
+626,First626,Last626,cust626@example.com, West ,2021-06-08
+627,First627,Last627,cust627@example.com,West,2023-02-23
+628,First628,Last628,cust628@example.com,NORTHEAST,2022-09-22
+629,First629,Last629,cust629@example.com,NORTHEAST,2021-09-04
+630,First630,Last630,cust630@example.com,NORTHEAST,2022-04-03
+631,First631,Last631,cust631@example.com,Southeast,2021-09-08
+632,First632,Last632,cust632@example.com,NORTHEAST,2022-07-07
+633,First633,Last633,cust633@example.com, West ,2021-05-24
+634,First634,Last634,cust634@example.com, West ,2022-08-13
+635,First635,Last635,cust635@example.com,Southeast,2023-04-19
+636,First636,Last636,cust636@example.com,midwest,2022-11-08
+637,First637,Last637,cust637@example.com, West ,2021-03-04
+638,First638,Last638,cust638@example.com,SOUTHWEST,2023-07-23
+639,First639,Last639,cust639@example.com, West ,2022-05-23
+640,First640,Last640,cust640@example.com, West ,2022-11-19
+641,First641,Last641,cust641@example.com,Southeast,2022-03-03
+642,First642,Last642,cust642@example.com,Southeast,2023-02-12
+643,First643,Last643,cust643@example.com,West,2021-11-04
+644,First644,Last644,cust644@example.com,West,2023-07-26
+645,First645,Last645,cust645@example.com,midwest,2022-07-25
+646,First646,Last646,cust646@example.com,West,2021-07-28
+647,First647,Last647,cust647@example.com,Southeast,2023-05-18
+648,First648,Last648,cust648@example.com,SOUTHWEST,2021-02-22
+649,First649,Last649,cust649@example.com,SOUTHWEST,2021-02-10
+650,First650,Last650,cust650@example.com,Southeast,2023-01-12
+651,First651,Last651,cust651@example.com,NORTHEAST,2023-06-10
+652,First652,Last652,cust652@example.com,NORTHEAST,2021-08-05
+653,First653,Last653,cust653@example.com,Southeast,2023-02-04
+654,First654,Last654,cust654@example.com,Southeast,2022-12-14
+655,First655,Last655,cust655@example.com,West,2022-07-20
+656,First656,Last656,cust656@example.com,midwest,2022-07-01
+657,First657,Last657,cust657@example.com, West ,2022-06-10
+658,First658,Last658,cust658@example.com,Southeast,2022-04-26
+659,First659,Last659,cust659@example.com,Southeast,2022-01-15
+660,First660,Last660,cust660@example.com,SOUTHWEST,2023-01-30
+661,First661,Last661,cust661@example.com,Southeast,2022-08-17
+662,First662,Last662,cust662@example.com,Southeast,2021-12-04
+663,First663,Last663,cust663@example.com,midwest,2022-05-27
+664,First664,Last664,cust664@example.com, West ,2021-09-21
+665,First665,Last665,cust665@example.com, West ,2022-10-20
+666,First666,Last666,cust666@example.com,SOUTHWEST,2023-03-26
+667,First667,Last667,cust667@example.com, West ,2022-05-16
+668,First668,Last668,cust668@example.com,NORTHEAST,2023-09-08
+669,First669,Last669,cust669@example.com,NORTHEAST,2023-08-26
+670,First670,Last670,cust670@example.com,NORTHEAST,2022-02-27
+671,First671,Last671,cust671@example.com,West,2022-12-26
+672,First672,Last672,cust672@example.com,SOUTHWEST,2022-01-18
+673,First673,Last673,cust673@example.com,NORTHEAST,2023-07-24
+674,First674,Last674,cust674@example.com,,2022-06-29
+675,First675,Last675,cust675@example.com,midwest,2022-06-27
+676,First676,Last676,cust676@example.com,West,2021-01-18
+677,First677,Last677,cust677@example.com,NORTHEAST,2023-04-06
+678,First678,Last678,cust678@example.com,SOUTHWEST,2022-06-21
+679,First679,Last679,cust679@example.com,West,2021-09-16
+680,First680,Last680,cust680@example.com,SOUTHWEST,2021-03-22
+681,First681,Last681,cust681@example.com, West ,2021-09-07
+682,First682,Last682,cust682@example.com, West ,2023-04-28
+683,First683,Last683,cust683@example.com,West,2023-02-17
+684,First684,Last684,cust684@example.com, West ,2022-07-20
+685,First685,Last685,cust685@example.com, West ,2021-06-25
+686,First686,Last686,cust686@example.com,NORTHEAST,2023-03-15
+687,First687,Last687,cust687@example.com,Southeast,2023-07-06
+688,First688,Last688,cust688@example.com,West,2023-07-12
+689,First689,Last689,cust689@example.com,midwest,2021-10-05
+690,First690,Last690,cust690@example.com,Southeast,2023-07-10
+691,First691,Last691,cust691@example.com,,2023-08-10
+692,First692,Last692,cust692@example.com, West ,2021-08-01
+693,First693,Last693,cust693@example.com,Southeast,2023-04-21
+694,First694,Last694,cust694@example.com,West,2022-08-01
+695,First695,Last695,cust695@example.com, West ,2022-11-25
+696,First696,Last696,cust696@example.com,NORTHEAST,2021-05-24
+697,First697,Last697,cust697@example.com,NORTHEAST,2022-05-28
+698,First698,Last698,cust698@example.com,SOUTHWEST,2022-03-24
+699,First699,Last699,cust699@example.com,midwest,2023-02-27
+700,First700,Last700,cust700@example.com,West,2021-01-31
+701,First701,Last701,cust701@example.com,West,2022-05-18
+702,First702,Last702,cust702@example.com,West,2022-03-19
+703,First703,Last703,cust703@example.com,Southeast,2021-03-29
+704,First704,Last704,cust704@example.com,West,2023-01-01
+705,First705,Last705,cust705@example.com,West,2022-12-30
+706,First706,Last706,cust706@example.com,midwest,2021-11-21
+707,First707,Last707,cust707@example.com,Southeast,2022-04-01
+708,First708,Last708,cust708@example.com,SOUTHWEST,2021-03-31
+709,First709,Last709,cust709@example.com,midwest,2022-06-09
+710,First710,Last710,cust710@example.com,midwest,2022-07-22
+711,First711,Last711,cust711@example.com,West,2023-06-04
+712,First712,Last712,cust712@example.com,Southeast,2023-03-09
+713,First713,Last713,cust713@example.com,Southeast,2022-08-09
+714,First714,Last714,cust714@example.com,Southeast,2021-05-23
+715,First715,Last715,cust715@example.com,midwest,2021-03-06
+716,First716,Last716,cust716@example.com,Southeast,2022-05-11
+717,First717,Last717,cust717@example.com,Southeast,2023-01-09
+718,First718,Last718,cust718@example.com,West,2022-04-14
+719,First719,Last719,cust719@example.com,midwest,2021-12-07
+720,First720,Last720,cust720@example.com, West ,2022-03-27
+721,First721,Last721,cust721@example.com,SOUTHWEST,2023-09-25
+722,First722,Last722,cust722@example.com,Southeast,2023-08-29
+723,First723,Last723,cust723@example.com, West ,2023-09-15
+724,First724,Last724,cust724@example.com,Southeast,2022-12-13
+725,First725,Last725,cust725@example.com,West,2021-11-30
+726,First726,Last726,cust726@example.com,SOUTHWEST,2022-01-09
+727,First727,Last727,cust727@example.com,NORTHEAST,2022-07-13
+728,First728,Last728,cust728@example.com,Southeast,2023-09-03
+729,First729,Last729,cust729@example.com,NORTHEAST,2022-03-25
+730,First730,Last730,cust730@example.com, West ,2023-04-19
+731,First731,Last731,cust731@example.com,midwest,2022-05-27
+732,First732,Last732,cust732@example.com,West,2022-11-06
+733,First733,Last733,cust733@example.com,SOUTHWEST,2021-03-17
+734,First734,Last734,cust734@example.com, West ,2022-02-15
+735,First735,Last735,cust735@example.com,midwest,2022-03-05
+736,First736,Last736,cust736@example.com, West ,2022-12-20
+737,First737,Last737,cust737@example.com, West ,2023-07-26
+738,First738,Last738,cust738@example.com,NORTHEAST,2022-11-12
+739,First739,Last739,cust739@example.com,West,2022-07-31
+740,First740,Last740,cust740@example.com,West,2023-09-18
+741,First741,Last741,,SOUTHWEST,2021-04-19
+742,First742,Last742,cust742@example.com,SOUTHWEST,2023-02-04
+743,First743,Last743,cust743@example.com, West ,2021-08-15
+744,First744,Last744,cust744@example.com,NORTHEAST,2022-08-26
+745,First745,Last745,cust745@example.com,NORTHEAST,2022-05-10
+746,First746,Last746,cust746@example.com,midwest,2021-04-29
+747,First747,Last747,cust747@example.com,SOUTHWEST,2021-11-16
+748,First748,Last748,cust748@example.com, West ,2022-05-10
+749,First749,Last749,cust749@example.com,NORTHEAST,2022-12-15
+750,First750,Last750,cust750@example.com,midwest,2023-04-10
+751,First751,Last751,cust751@example.com, West ,2022-10-26
+752,First752,Last752,cust752@example.com,midwest,2021-09-07
+753,First753,Last753,cust753@example.com,West,2022-07-28
+754,First754,Last754,cust754@example.com,West,2022-10-07
+755,First755,Last755,,Southeast,2022-02-10
+756,First756,Last756,cust756@example.com, West ,2022-04-06
+757,First757,Last757,cust757@example.com,NORTHEAST,2021-08-08
+758,First758,Last758,cust758@example.com,Southeast,2022-08-15
+759,First759,Last759,cust759@example.com,midwest,2022-01-10
+760,First760,Last760,cust760@example.com, West ,2022-11-18
+761,First761,Last761,cust761@example.com,SOUTHWEST,2021-11-17
+762,First762,Last762,cust762@example.com,SOUTHWEST,2021-04-27
+763,First763,Last763,cust763@example.com,midwest,2021-06-26
+764,First764,Last764,cust764@example.com,Southeast,2023-07-30
+765,First765,Last765,cust765@example.com,Southeast,2021-11-17
+766,First766,Last766,cust766@example.com,West,2022-01-18
+767,First767,Last767,cust767@example.com,Southeast,2022-09-03
+768,First768,Last768,cust768@example.com, West ,2022-05-14
+769,First769,Last769,cust769@example.com,West,2023-08-12
+770,First770,Last770,cust770@example.com,West,2021-10-23
+771,First771,Last771,cust771@example.com,NORTHEAST,2022-09-27
+772,First772,Last772,cust772@example.com,SOUTHWEST,2022-05-12
+773,First773,Last773,cust773@example.com,West,2022-06-02
+774,First774,Last774,cust774@example.com,Southeast,2022-03-02
+775,First775,Last775,cust775@example.com,Southeast,2021-03-26
+776,First776,Last776,cust776@example.com,midwest,2021-10-27
+777,First777,Last777,cust777@example.com,West,2021-06-22
+778,First778,Last778,cust778@example.com,midwest,2022-07-17
+779,First779,Last779,cust779@example.com,SOUTHWEST,2023-03-05
+780,First780,Last780,cust780@example.com,West,2023-04-23
+781,First781,Last781,cust781@example.com, West ,2022-07-14
+782,First782,Last782,cust782@example.com,NORTHEAST,2023-04-30
+783,First783,Last783,cust783@example.com,NORTHEAST,2022-04-06
+784,First784,Last784,cust784@example.com,Southeast,2022-03-26
+785,First785,Last785,cust785@example.com,midwest,2021-08-03
+786,First786,Last786,cust786@example.com,Southeast,2023-06-01
+787,First787,Last787,cust787@example.com,Southeast,2022-09-23
+788,First788,Last788,cust788@example.com,midwest,2023-04-05
+789,First789,Last789,cust789@example.com, West ,2022-09-04
+790,First790,Last790,cust790@example.com,SOUTHWEST,2021-10-27
+791,First791,Last791,cust791@example.com,West,2023-07-11
+792,First792,Last792,cust792@example.com, West ,2023-07-30
+793,First793,Last793,cust793@example.com,Southeast,2021-05-10
+794,First794,Last794,cust794@example.com, West ,2022-12-30
+795,First795,Last795,cust795@example.com,midwest,2022-02-07
+796,First796,Last796,cust796@example.com, West ,2022-10-05
+797,First797,Last797,cust797@example.com,SOUTHWEST,2023-03-25
+798,First798,Last798,cust798@example.com,midwest,2023-02-07
+799,First799,Last799,cust799@example.com,NORTHEAST,2022-04-11
+800,First800,Last800,cust800@example.com, West ,2023-06-09
