@@ -1,2 +1,5 @@
 pandas>=1.3,<3
 pytest>=7
+# local Spark + Delta for the Databricks pipeline and its parity tests (needs Java 11/17)
+pyspark==3.5.3
+delta-spark==3.2.1

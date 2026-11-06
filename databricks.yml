@@ -1,0 +1,60 @@
+# Databricks Asset Bundle for the nightly retail ETL (replaces legacy/crontab.txt).
+#
+#   databricks bundle validate -t dev
+#   databricks bundle deploy   -t dev
+#   databricks bundle run      -t dev retail_nightly_etl
+bundle:
+  name: retail_etl
+
+include:
+  - resources/*.yml
+
+artifacts:
+  databricks_pipeline:
+    type: whl
+    path: .
+    build: python -m build --wheel
+
+variables:
+  catalog:
+    description: Unity Catalog catalog for all bronze/silver/gold tables.
+    default: main
+  schema:
+    description: Unity Catalog schema for all bronze/silver/gold tables.
+    default: retail
+  source_path:
+    description: Unity Catalog Volume where the POS / e-commerce CSV drops land.
+    default: /Volumes/main/retail/raw
+  checkpoint_path:
+    description: Volume path for Auto Loader checkpoints and schema tracking.
+    default: /Volumes/main/retail/_checkpoints
+  vip_threshold:
+    description: Lifetime net revenue at or above which a customer is VIP.
+    default: "40000"
+  mid_threshold:
+    description: Lifetime net revenue at or above which a customer is MID.
+    default: "25000"
+  timezone_id:
+    description: Time zone for the 02:00 schedule (the legacy cron used the batch server's local time).
+    default: UTC
+  alert_email:
+    description: Address paged when the nightly job fails or runs long.
+    default: retail-etl-oncall@example.com
+
+targets:
+  dev:
+    # Prefixes resources with [dev <user>] and pauses the schedule.
+    mode: development
+    default: true
+    variables:
+      schema: retail_dev
+      source_path: /Volumes/main/retail_dev/raw
+      checkpoint_path: /Volumes/main/retail_dev/_checkpoints
+
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+    # Recommended: run prod as a service principal instead of the deploying user.
+    # run_as:
+    #   service_principal_name: <application-id>
