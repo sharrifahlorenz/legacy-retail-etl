@@ -108,3 +108,43 @@ def test_rerun_is_idempotent(spark, pipeline_run):
     assert metrics["numTargetRowsUpdated"] == "0"
     assert metrics["numTargetRowsInserted"] == "0"
     assert metrics["numTargetRowsDeleted"] == "0"
+
+
+def _write_drop(src, dest, lines):
+    with open(src) as f:
+        header = f.readline()
+    with open(dest, "w") as f:
+        f.write(header + "".join(lines))
+
+
+def _data_lines(source):
+    with open(os.path.join(RAW_DIR, f"{source}.csv")) as f:
+        return f.readlines()[1:]
+
+
+def test_incremental_drops_accumulate_full_history(spark, tmp_path):
+    """Upstream sends only new data each night; gold must cover every drop received so far.
+
+    The raw extracts are split into two nightly drops (customers too, so night-2 orders can reference
+    night-1 customers). After both nights, gold must equal the legacy result on the full data.
+    """
+    cfg = PipelineConfig(catalog="spark_catalog", schema="retail_incremental", source_path=str(tmp_path),
+                         ingest_mode="batch")
+    orders, customers = _data_lines("orders"), _data_lines("customers")
+    nights = {
+        1: {"orders": orders[: len(orders) // 2], "customers": customers[: len(customers) // 2],
+            "products": _data_lines("products")},
+        2: {"orders": orders[len(orders) // 2:], "customers": customers[len(customers) // 2:]},
+    }
+
+    for night, drop in nights.items():
+        for source, lines in drop.items():
+            _write_drop(os.path.join(RAW_DIR, f"{source}.csv"), tmp_path / f"{source}_night{night}.csv", lines)
+        pipeline.run(spark, cfg)
+        if night == 1:
+            night1_facts = spark.table(cfg.table("fct_order_lines")).count()
+
+    assert 0 < night1_facts < spark.table(cfg.table("fct_order_lines")).count()
+    for table in ["agg_daily_sales", "dim_customer_value"]:
+        expected = pd.read_csv(os.path.join(EXPECTED_DIR, f"{table}.csv"))
+        assert_frame_parity(read_gold(spark, cfg, table), expected, KEYS[table], MONEY_COLS[table])

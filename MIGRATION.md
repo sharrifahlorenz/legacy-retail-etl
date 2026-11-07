@@ -83,14 +83,21 @@ There are no Python UDFs, no `toPandas()` and no row loops in `databricks_pipeli
   `margin_amount`, `net_revenue`, `margin`, `lifetime_net_revenue`) instead of float64. Line amounts are
   still rounded exactly like legacy and then stored as decimals, so the aggregates are exact sums.
   Parity: 0.00 difference on every money column.
-- **Latest snapshot wins for customers/products.** Bronze is append-only, so if the master files are
-  re-delivered every night, `silver.latest_per_key` keeps the most recently ingested row per
-  `customer_id` / `product_id`. With a single snapshot (the legacy setup) this changes nothing.
-- **History across drops.** Legacy truncates and reloads from whatever is in `data/raw/` that night.
-  The Lakehouse accumulates every ingested file in bronze and rebuilds silver/gold from all of it, with
-  exact duplicates removed. If upstream sends *full* extracts nightly, the results are identical. If it
-  sends *incremental* drops, gold now covers full history instead of only the last drop. Confirm which
-  one upstream sends before cut-over.
+- **Full history from incremental drops (confirmed: upstream sends only new data each night).**
+  Legacy truncates and reloads from whatever is in `data/raw/` that night, so its outputs only ever
+  covered the latest drop. The Lakehouse appends every drop to bronze (Auto Loader ingests each file
+  once) and rebuilds silver/gold from all of it, with exact duplicates removed across drops. As a result:
+  - `fct_order_lines` and `agg_daily_sales` cover every order received so far, not just last night's.
+  - `dim_customer_value` is a true lifetime value: `lifetime_net_revenue`, `order_count`,
+    first/last order date and `tier` accumulate across nights, so tiers can differ from what the legacy
+    job reported once several nights have landed.
+  - Orders whose customer arrived in an earlier night's `customers` drop are kept. Legacy would have
+    dropped them as orphans (DATA-212 inner join) because it only saw that night's customer file.
+  - Covered by `tests/test_parity.py::test_incremental_drops_accumulate_full_history`: the raw data is
+    split into two nightly drops, and after night 2 gold matches the golden snapshots exactly.
+- **Latest row wins for customers/products.** `silver.latest_per_key` keeps the most recently
+  ingested row per `customer_id` / `product_id`, so a customer or product re-sent in a later drop
+  (e.g. a region change) updates the dimension instead of duplicating join rows.
 
 ## Parity results (local Spark 3.5.3 + Delta 3.2.1, `data/raw/`)
 
@@ -128,7 +135,7 @@ databricks bundle run      -t dev retail_nightly_etl
 Production:
 
 ```bash
-databricks bundle deploy -t prod --var alert_email=oncall@yourco.com --var timezone_id=America/New_York
+databricks bundle deploy -t prod --var alert_email=oncall@yourco.com
 ```
 
 All Unity Catalog names, paths, thresholds, the schedule time zone and the alert address are bundle
@@ -148,7 +155,10 @@ python -m databricks_pipeline.main all --local --catalog spark_catalog --schema 
 
 1. Deploy `dev`, land a copy of the nightly drop into the dev Volume, run the job and compare gold to
    the legacy SQLite outputs (the parity test logic in `tests/test_parity.py` can be pointed at both).
-2. Deploy `prod` and let it run in parallel with the cron job for a few nights. Compare outputs daily.
+   Only the **first** night is directly comparable: from night 2 on, gold covers all drops while legacy
+   only covers the latest one (see *Full history from incremental drops*).
+2. Deploy `prod` and let it run in parallel with the cron job for a few nights. Compare outputs daily
+   for that night's `order_date`s and customers only.
 3. Move consumers (exec dashboard, CRM, finance) from the shared-drive CSVs to the UC tables.
 4. Disable the cron entry on `etl-batch-01` (`legacy/crontab.txt`), then remove `legacy/` in a later PR.
 
@@ -156,7 +166,7 @@ python -m databricks_pipeline.main all --local --catalog spark_catalog --schema 
 
 | Concern | Legacy | Lakehouse |
 |---|---|---|
-| Scheduling | cron on one server | Databricks Job `retail-nightly-etl`, Quartz `0 0 2 * * ?`, `max_concurrent_runs: 1` |
+| Scheduling | cron on one server | Databricks Job `retail-nightly-etl`, Quartz `0 0 2 * * ?` in UTC, `max_concurrent_runs: 1` |
 | Compute | one VM, in-memory pandas (OOMs on peak volume) | serverless jobs compute that scales with the data. A small job cluster is an option (see comment in `resources/retail_nightly_etl.job.yml`) |
 | Failure handling | log file, manual rerun | each task retries twice (5 min apart, also on timeout). Failed runs can be repaired from the failed task. Email on failure and when a run exceeds 1 h (`health` rule); 3 h hard timeout |
 | History | truncate + reload, none | **Delta time travel**: `SELECT * FROM main.retail.agg_daily_sales VERSION AS OF 12` / `TIMESTAMP AS OF '2025-01-01'`, `DESCRIBE HISTORY`, `RESTORE TABLE ... TO VERSION AS OF n` to roll back a bad load |
@@ -186,5 +196,3 @@ stay internal. Time travel depends on retention (`delta.logRetentionDuration`, d
   metadata columns are exercised through `spark.read.csv`.
 - Serverless specifics: `environment_version: "2"`, wheel installation from `../dist/*.whl`, and the
   `python_wheel_task` entry point `retail_pipeline`.
-- Schedule time zone: the legacy cron ran in the batch server's local time, which isn't recorded in the
-  repo. The bundle defaults to `UTC` (`timezone_id` variable).
