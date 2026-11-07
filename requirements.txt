@@ -3,3 +3,5 @@ pytest>=7
 # local Spark + Delta for the Databricks pipeline and its parity tests (needs Java 11/17)
 pyspark==3.5.3
 delta-spark==3.2.1
+# pyspark 3.5's toPandas() imports distutils, which Python 3.12 removed; setuptools provides it
+setuptools; python_version >= "3.12"
