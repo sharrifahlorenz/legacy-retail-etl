@@ -1,0 +1,100 @@
+resources:
+  jobs:
+    retail_nightly_etl:
+      name: retail-nightly-etl
+      description: Nightly retail ETL, bronze -> silver -> gold (replaces the etl-batch-01 cron job).
+      tags:
+        project: retail-etl
+
+      schedule:
+        quartz_cron_expression: "0 0 2 * * ?"  # 02:00 daily, same as legacy/crontab.txt
+        timezone_id: ${var.timezone_id}
+        pause_status: UNPAUSED
+
+      max_concurrent_runs: 1
+      timeout_seconds: 10800
+
+      health:
+        rules:
+          - metric: RUN_DURATION_SECONDS
+            op: GREATER_THAN
+            value: 3600
+
+      email_notifications:
+        on_failure:
+          - ${var.alert_email}
+        on_duration_warning_threshold_exceeded:
+          - ${var.alert_email}
+
+      tasks:
+        - task_key: bronze
+          description: Auto Loader ingest of raw CSVs from the Volume into bronze_* tables.
+          environment_key: default
+          max_retries: 2
+          min_retry_interval_millis: 300000
+          retry_on_timeout: true
+          python_wheel_task:
+            package_name: databricks_pipeline
+            entry_point: retail_pipeline
+            parameters:
+              - bronze
+              - --catalog=${var.catalog}
+              - --schema=${var.schema}
+              - --source-path=${var.source_path}
+              - --checkpoint-path=${var.checkpoint_path}
+              - --ingest-mode=autoloader
+              - --vip-threshold=${var.vip_threshold}
+              - --mid-threshold=${var.mid_threshold}
+
+        - task_key: silver
+          description: Clean, type and conform bronze into silver_* tables.
+          depends_on:
+            - task_key: bronze
+          environment_key: default
+          max_retries: 2
+          min_retry_interval_millis: 300000
+          retry_on_timeout: true
+          python_wheel_task:
+            package_name: databricks_pipeline
+            entry_point: retail_pipeline
+            parameters:
+              - silver
+              - --catalog=${var.catalog}
+              - --schema=${var.schema}
+              - --vip-threshold=${var.vip_threshold}
+              - --mid-threshold=${var.mid_threshold}
+
+        - task_key: gold
+          description: Build fct_order_lines, agg_daily_sales and dim_customer_value.
+          depends_on:
+            - task_key: silver
+          environment_key: default
+          max_retries: 2
+          min_retry_interval_millis: 300000
+          retry_on_timeout: true
+          python_wheel_task:
+            package_name: databricks_pipeline
+            entry_point: retail_pipeline
+            parameters:
+              - gold
+              - --catalog=${var.catalog}
+              - --schema=${var.schema}
+              - --vip-threshold=${var.vip_threshold}
+              - --mid-threshold=${var.mid_threshold}
+
+      # Serverless jobs compute. To use a small classic job cluster instead, replace
+      # `environment_key` on each task with `job_cluster_key: etl` (plus `libraries: [{whl: ../dist/*.whl}]`)
+      # and define:
+      #   job_clusters:
+      #     - job_cluster_key: etl
+      #       new_cluster:
+      #         spark_version: 15.4.x-scala2.12
+      #         node_type_id: i3.xlarge
+      #         num_workers: 1
+      #         data_security_mode: SINGLE_USER
+      environments:
+        - environment_key: default
+          spec:
+            environment_version: "2"
+            dependencies:
+              - ../dist/*.whl

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "databricks_pipeline"
+dynamic = ["version"]
+description = "Nightly retail ETL on Databricks: PySpark + Delta Lake medallion pipeline"
+requires-python = ">=3.10"
+# pyspark and delta-spark are provided by the Databricks runtime; see requirements.txt for local runs.
+dependencies = []
+
+[project.scripts]
+retail_pipeline = "databricks_pipeline.main:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "databricks_pipeline.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["databricks_pipeline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

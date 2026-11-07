@@ -4,3 +4,10 @@ __pycache__/
 .pytest_cache/
 .venv/
 DEVIN_TASK.md
+spark-warehouse/
+metastore_db/
+derby.log
+build/
+dist/
+*.egg-info/
+.databricks/
